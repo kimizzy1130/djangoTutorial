@@ -7,14 +7,18 @@
     </head>
 
     <body>
-        <img src="https://img.vogue.co.kr/vogue/2019/09/style_5d83355c0361d.png"/>
-        <h1>Hello!</h1>
-
-        <h2>Place 1</h2>
-        <h4 class="description">Great Place!</h4>
-
-        <h2>Place 2</h2>
-        <h4 class="description">Nice Place!</h4>
-
+        {% include 'partial/header.html' %}
+        
+    <div class="cards">
+        {% for place in places %}
+        <div class="room_card">   
+            <h4> {{place.name}} </h4>
+            <h4> {{place.description}} </h4>
+            <h4> {{place.address}} </h4>
+        </div>     
+    {% endfor %}
+        
+</div> 
+{% include 'partial/footer.html'%}
     </body>
 </html>
