@@ -11,20 +11,18 @@
         
     <div class="cards">
         {% for place in places %}
-        <div class="room_card">
-            {% if place.thumbnail != None%}
-                <img src={{place.thumbnail}}/> 
-            {% endif %}
-            <a href={% url "places:detail" place.pk %}>
+        <a href={% url "places:detail" place.pk %}>
+            <div class="room_card">
+                {% if place.thumbnail != None%}
+                    <img src={{place.thumbnail}}/> 
+                {% endif %}
                 <h2> {{place.name}} </h2>
-            </a>
-            <h4> {{place.description}} </h4>
-            <h4> {{place.address}} </h4>
-        </div>
-        <div> {{place.thumbnail}} </div>  
-    {% endfor %}
-        
-</div> 
+                <h4> {{place.description}} </h4>
+                <h4> {{place.address}} </h4>
+            </div>
+         </a>
+        {% endfor %}
+    </div> 
 {% include 'partial/footer.html'%}
     </body>
 </html>
