@@ -11,11 +11,13 @@
         
     <div class="cards">
         {% for place in places %}
-        <div class="room_card">  
+        <div class="room_card">
             {% if place.thumbnail != None%}
                 <img src={{place.thumbnail}}/> 
             {% endif %}
-            <h4> {{place.name}} </h4>
+            <a href={% url "places:detail" place.pk %}>
+                <h2> {{place.name}} </h2>
+            </a>
             <h4> {{place.description}} </h4>
             <h4> {{place.address}} </h4>
         </div>

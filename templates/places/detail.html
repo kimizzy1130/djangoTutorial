@@ -1,2 +1,10 @@
 <div>{{place.name}}</div>
 <div>{{place.description}}</div>
+<div>{{place.type}}</div>
+<div>{{place.address}}</div>
+{% for photo in place.photos.all %}
+    <div><img src={{photo.file.url}} style="width: 100%; max-width: 400px;"/></div>
+{% endfor %}
+
+
+

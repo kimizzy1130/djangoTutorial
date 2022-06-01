@@ -8,3 +8,4 @@ def all_places(request):
 def place_detail(request, pk):
     place = models.Place.objects.get(pk=pk)
     return render(request, "places/detail.html", context={"place": place})
+
