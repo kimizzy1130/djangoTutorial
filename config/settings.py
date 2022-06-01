@@ -46,7 +46,8 @@ PROJECT_APPS = [
     'places.apps.PlacesConfig'
 ]
 
-INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
+
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
